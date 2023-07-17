@@ -11,7 +11,9 @@ const cerateTask = (evento) =>
     const input = document.querySelector("[data-form-input]")
     const value = input.value  
     console.log(input.value);  
-    const task = document.querySelector("[data-task]")
+    const list = document.querySelector("[data-list]")
+    const task = document.createElement("li")
+    task.classList.add("card")
     console.log(task);
     const content = `   <div>
                             <i class="far fa-check-square icon"></i>
@@ -19,7 +21,8 @@ const cerateTask = (evento) =>
                         </div>
                         <i class="fas fa-trash-alt trashIcon icon"></i>`
     task.innerHTML = content
-                        console.log(content);
+    list.appendChild(task)
+    console.log(content);
     input.value = ""
 
 }
